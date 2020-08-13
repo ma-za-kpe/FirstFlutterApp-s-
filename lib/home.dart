@@ -1,7 +1,7 @@
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:practice_app/projects.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_web_browser/flutter_web_browser.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -160,7 +160,7 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   InkWell(
-                    onTap: () => _launchTwitterURL,
+                    onTap: () => openBrowserTab(),
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       radius: 30.0,
@@ -230,15 +230,15 @@ class Home extends StatelessWidget {
 
   navigateToDicePage(BuildContext context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Projects()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => Projects(),
+      ),
+    );
   }
 
-  Future<void> _launchTwitterURL() async {
-    const url = 'https://flutter.dev';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
+  openBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+        url: "https://flutter.io/", androidToolbarColor: Colors.deepPurple);
   }
 }
