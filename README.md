@@ -1,16 +1,20 @@
-# practice_app
+# Zero_To_Flutter (a)
 
-A new Flutter application.
+A project showcasing the fundamentals of flutter ive picked up from this [Introduction to Flutter Development Using Dart course](https://www.appbrewery.co/courses/851555/lectures/15448537) by Angela Yu. 
 
-## Getting Started
+## Play
+- Take the app for a test drive here. [Practice App](https://appetize.io/app/p2h3c1trbwcprcznxpf6gf098m)
 
-This project is a starting point for a Flutter application.
+## Built With 🛠
+- [Flutter](https://kotlinlang.org/) - First class and official programming language for Android development.
+- [Dart](https://kotlinlang.org/) - First class and official programming language for Android development.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Credit
+This project is built along, with knowledge gained from the the course below.
+- [Introduction to Flutter Development Using Dart course](https://www.udemy.com/course/flutter-bootcamp-with-dart/learn/lecture/14485452#overview0).
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contact
+If you need any help, you can connect with me.
+
+Visit:- [maku](https://maku.dev)
