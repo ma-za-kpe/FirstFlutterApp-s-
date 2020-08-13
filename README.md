@@ -1,5 +1,7 @@
 # Zero_To_Flutter (a)
 
+![](media/prac.png)
+
 A project showcasing the fundamentals of flutter ive picked up from this [Introduction to Flutter Development Using Dart course](https://www.appbrewery.co/courses/851555/lectures/15448537) by Angela Yu. 
 
 ## Play
