@@ -114,23 +114,26 @@ class Home extends StatelessWidget {
                     ),
                   ),
                 )),
-            Card(
-              color: Colors.white,
-              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.email,
-                    color: Colors.red.shade900,
-                  ),
-                  title: Text(
-                    "makpalyy@gmail.com",
-                    style: GoogleFonts.sourceSansPro(
-                      textStyle: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.red.shade900,
-                        fontWeight: FontWeight.w300,
+            InkWell(
+              onTap: () => openEamilBrowserTab(),
+              child: Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.red.shade900,
+                    ),
+                    title: Text(
+                      "makpalyy@gmail.com",
+                      style: GoogleFonts.sourceSansPro(
+                        textStyle: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.red.shade900,
+                          fontWeight: FontWeight.w300,
+                        ),
                       ),
                     ),
                   ),
@@ -160,7 +163,7 @@ class Home extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   InkWell(
-                    onTap: () => openBrowserTab(),
+                    onTap: () => openTwitterBrowserTab(),
                     child: CircleAvatar(
                       backgroundColor: Colors.white,
                       radius: 30.0,
@@ -174,49 +177,61 @@ class Home extends StatelessWidget {
                   SizedBox(
                     width: 10.0,
                   ),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 30.0,
-                    child: FaIcon(
-                      FontAwesomeIcons.linkedin,
-                      color: Colors.red.shade900,
-                      size: 30.0,
+                  InkWell(
+                    onTap: () => openLinkedBrowserTab(),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 30.0,
+                      child: FaIcon(
+                        FontAwesomeIcons.linkedin,
+                        color: Colors.red.shade900,
+                        size: 30.0,
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 10.0,
                   ),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 30.0,
-                    child: FaIcon(
-                      FontAwesomeIcons.github,
-                      color: Colors.red.shade900,
-                      size: 30.0,
+                  InkWell(
+                    onTap: () => openGithubBrowserTab(),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 30.0,
+                      child: FaIcon(
+                        FontAwesomeIcons.github,
+                        color: Colors.red.shade900,
+                        size: 30.0,
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 10.0,
                   ),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 30.0,
-                    child: FaIcon(
-                      FontAwesomeIcons.medium,
-                      color: Colors.red.shade900,
-                      size: 30.0,
+                  InkWell(
+                    onTap: () => openMediumBrowserTab(),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 30.0,
+                      child: FaIcon(
+                        FontAwesomeIcons.medium,
+                        color: Colors.red.shade900,
+                        size: 30.0,
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 10.0,
                   ),
-                  CircleAvatar(
-                    backgroundColor: Colors.white,
-                    radius: 30.0,
-                    child: FaIcon(
-                      FontAwesomeIcons.link,
-                      color: Colors.red.shade900,
-                      size: 30.0,
+                  InkWell(
+                    onTap: () => openLinkBrowserTab(),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 30.0,
+                      child: FaIcon(
+                        FontAwesomeIcons.link,
+                        color: Colors.red.shade900,
+                        size: 30.0,
+                      ),
                     ),
                   ),
                 ],
@@ -237,8 +252,37 @@ class Home extends StatelessWidget {
     );
   }
 
-  openBrowserTab() async {
+  openEamilBrowserTab() async {
     await FlutterWebBrowser.openWebPage(
-        url: "https://flutter.io/", androidToolbarColor: Colors.deepPurple);
+        url: "makpalyy@gmail.com", androidToolbarColor: Colors.deepPurple);
+  }
+
+  openTwitterBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+        url: "https://twitter.com/ma_za_kpe",
+        androidToolbarColor: Colors.deepPurple);
+  }
+
+  openLinkedBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+        url: "https://www.linkedin.com/in/maku-mazakpe-700a3a165/",
+        androidToolbarColor: Colors.deepPurple);
+  }
+
+  openGithubBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+        url: "https://github.com/ma-za-kpe",
+        androidToolbarColor: Colors.deepPurple);
+  }
+
+  openMediumBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+        url: "https://medium.com/me/stories/public",
+        androidToolbarColor: Colors.deepPurple);
+  }
+
+  openLinkBrowserTab() async {
+    await FlutterWebBrowser.openWebPage(
+        url: "https://www.maku.dev/", androidToolbarColor: Colors.deepPurple);
   }
 }

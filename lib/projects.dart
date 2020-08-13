@@ -1,6 +1,7 @@
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:practice_app/magic_eight.dart';
+import 'package:practice_app/quizzler/quizzler.dart';
 import 'package:practice_app/story/storyller.dart';
 import 'package:practice_app/xylophone.dart';
 import 'dice.dart';
@@ -155,7 +156,7 @@ class Projects extends StatelessWidget {
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
               child: InkWell(
                 onTap: () => {
-                  navigateToQuizzlerPage(context),
+                  navigateToStoryPage(context),
                 },
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -216,6 +217,15 @@ class Projects extends StatelessWidget {
   }
 
   navigateToQuizzlerPage(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => QuizPage(),
+      ),
+    );
+  }
+
+  navigateToStoryPage(BuildContext context) {
     Navigator.push(
       context,
       MaterialPageRoute(
